@@ -1,0 +1,7 @@
+# Project - 1: Automated Deployment of AWS S3 Static Website
+
+Deploying a static website on Amazon S3 involves multiple manual steps, including creating an S3 bucket, configuring ownership controls, setting up public access policies, defining Access Control Lists (ACLs), and configuring the bucket as a static website with appropriate index and error documents. Managing these tasks manually can be time-consuming and error-prone, especially as the project scales or changes. Additionally, ensuring consistent security configurations across resources can be challenging. This project addresses these challenges by providing a Terraform configuration that automates the entire process, streamlining the deployment of a static website on AWS S3.
+
+### Solution: AWS S3 Static Website Deployment with Terraform
+
+This Terraform project simplifies the deployment of a static website on Amazon S3. The configuration defines the necessary AWS resources, including the S3 bucket, ownership controls, public access policies, ACLs, and website configuration. The project ensures that object ownership is set to "BucketOwnerPreferred," public access is allowed, and ACLs are configured for public read access to objects. It includes two HTML files, `index.html` and `error.html`, serving as the main and error pages, respectively. The S3 bucket is configured to host a static website, with `index.html` as the index document and `error.html` as the error document. This automation enhances efficiency, consistency, and ease of maintenance for static website deployments on AWS.
