@@ -29,20 +29,20 @@ resource "aws_s3_bucket_acl" "acl" {
 }
 
 resource "aws_s3_object" "index" {
-  bucket = aws_s3_bucket.mg-bucket-103.id
-  key    = "index.html"
-  source = "index.html"
+  bucket       = aws_s3_bucket.mg-bucket-103.id
+  key          = "index.html"
+  source       = "index.html"
   content_type = "text/html"
-  acl = "public-read"
+  acl          = "public-read"
 
 }
 
 resource "aws_s3_object" "error" {
-  bucket = aws_s3_bucket.mg-bucket-103.id
-  key    = "error.html"
-  source = "error.html"
+  bucket       = aws_s3_bucket.mg-bucket-103.id
+  key          = "error.html"
+  source       = "error.html"
   content_type = "text/html"
-  acl = "public-read"
+  acl          = "public-read"
 
 }
 
@@ -57,7 +57,7 @@ resource "aws_s3_bucket_website_configuration" "ws-config" {
     key = "error.html"
   }
 
-  depends_on = [aws_s3_bucket_acl.acl ]
+  depends_on = [aws_s3_bucket_acl.acl]
 }
 
 
